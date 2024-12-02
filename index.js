@@ -1,5 +1,5 @@
-const app = require('express')();
-const http = require('http').createServer(app);
+const express = require('express')
+const app = express()
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
     res.send('Hello From Server Side');
 })
 
-http.listen(5000, () => {
+app.listen(5000, () => {
     console.log('Listening on port 5000');
 })
